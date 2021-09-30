@@ -30,7 +30,7 @@ public class UserController {
         return userService.getUserById(id);
     }
 
-    @GetMapping("/users/properties")
+    @GetMapping("/properties")
     public String getProperties() throws JsonProcessingException {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
         Properties properties = new Properties(userServiceConfig.getMsg(), userServiceConfig.getBuildVersion());
